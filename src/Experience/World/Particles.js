@@ -382,11 +382,14 @@ export default class Particles {
           label: 'autoMorph',
         })
         .on('change', (ev) => {
-          if (ev.value == true) {
+          if (ev.value === true) {
             this.particlesObject.morph(Math.floor(Math.random() * 4));
-            setInterval(() => {
+            this.autoMorphInterval = setInterval(() => {
               this.particlesObject.morph(Math.floor(Math.random() * 5));
             }, 3500);
+          } else {
+            clearInterval(this.autoMorphInterval);
+            this.autoMorphInterval = null;
           }
         });
 
