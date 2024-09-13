@@ -1,10 +1,9 @@
 import * as THREE from 'three';
-import Experience from './Experience.js';
-
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { FilmPass } from 'three/addons/postprocessing/FilmPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import Experience from './Experience.js';
 
 export default class Renderer {
   constructor() {
@@ -54,8 +53,8 @@ export default class Renderer {
     this.renderPass = new RenderPass(this.scene, this.camera.instance);
     this.composer.addPass(this.renderPass);
 
-    this.glitchPass = new FilmPass(8, false);
-    this.composer.addPass(this.glitchPass);
+    this.filmPass = new FilmPass(8, false);
+    this.composer.addPass(this.filmPass);
 
     this.outputPass = new OutputPass();
     this.composer.addPass(this.outputPass);
