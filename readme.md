@@ -4,7 +4,7 @@
 
 Is a study project for learning particles morphing in `three.js` and `WebGL`. The scene consists of a grid of particles that morph into different shapes.
 
-Live: [https://particle-morphing-shader.vercel.app](https://particle-morphing-shader.vercel.app/#debug)
+Live: [Particle Morphing Shader](https://particle-morphing-shader.vercel.app/#debug)
 
 > [!NOTE]
 > To tweak the settings, use the `#debug` query parameter. 
